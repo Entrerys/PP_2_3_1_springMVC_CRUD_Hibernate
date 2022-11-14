@@ -1,6 +1,6 @@
-package project.web.Dao;
+package project.web.dao;
 
-import project.web.Model.User;
+import project.web.model.User;
 
 import java.util.List;
 
@@ -11,10 +11,10 @@ public interface UsersDao {
     void removeUserById(int id);
 
     List<User> getAllUsers();
+
     User getUserById(int id);
 
     void updateUser(int id, User user);
-
 
 
 }

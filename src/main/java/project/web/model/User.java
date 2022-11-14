@@ -1,19 +1,20 @@
-package project.web.Model;
+package project.web.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import javax.persistence.Entity;
 
 @javax.persistence.Entity(name = "User")
-@Table(name= "users", schema = "mynewdb")
+@Table(name = "users", schema = "mynewdb")
 public class User implements Serializable {
 
     public User() {
     }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id")
+    @Column(name = "id")
     private int id;
+
     @Column(name = "name")
     private String name;
 

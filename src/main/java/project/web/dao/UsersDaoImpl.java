@@ -1,6 +1,6 @@
-package project.web.Dao;
+package project.web.dao;
 
-import project.web.Model.User;
+import project.web.model.User;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -12,6 +12,7 @@ import java.util.List;
 public class UsersDaoImpl implements UsersDao {
     @PersistenceContext
     private EntityManager entityManager;
+
     @Transactional
     @Override
     public void saveUser(User user) {
@@ -22,15 +23,18 @@ public class UsersDaoImpl implements UsersDao {
     public void removeUserById(int id) {
         entityManager.remove(getUserById(id));
     }
+
     @Override
     public List<User> getAllUsers() {
         List<User> list = entityManager.createQuery("from User", User.class).getResultList();
         return list;
     }
+
     @Override
-    public User getUserById(int id){
-        return entityManager.find(User.class,id);
+    public User getUserById(int id) {
+        return entityManager.find(User.class, id);
     }
+
     @Transactional
     @Override
     public void updateUser(int id, User user) {

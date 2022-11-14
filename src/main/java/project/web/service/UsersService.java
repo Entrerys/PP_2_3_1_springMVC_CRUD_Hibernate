@@ -1,6 +1,6 @@
-package project.web.Service;
+package project.web.service;
 
-import project.web.Model.User;
+import project.web.model.User;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package project.web.Util;
+package project.web.util;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
